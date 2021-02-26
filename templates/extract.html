@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <style>
+        body{
+            background-color: azure;
+        }
+        ul{
+            color: #333333;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <h2>International Akhbar</h2>
+    <h4 id="date"></h4>
+    {% for key,value in dict.items %}
+        <hr><h4>{{key}}</h4><hr>
+        <ul>
+        {% for v in value %}
+            <li>
+                {{v.text}}<br>
+                {{v.emotion}}<br>
+                {{v.sentiment}}<br>
+                {{v.lang}}<br>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+    <script>
+        n=new Date();
+        y=n.getFullYear();
+        m=n.getMonth()+1;
+        d=n.getDate();
+        document.getElementById("date").innerHTML=d+"/"+m+"/"+y;
+    </script>
+</body>
+</html>
