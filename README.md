@@ -1,4 +1,5 @@
 # Distinctive News Feed System
+## Created by: [Kuldeep](https://github.com/kuldeep1007) and [Bharat](https://github.com/joshi-coder)
 
 ### Natural Language Processing and machine learning is used for this project. Django is used as Backend
 
